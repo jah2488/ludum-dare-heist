@@ -15,7 +15,7 @@
    id="svg4257"
    version="1.1"
    inkscape:version="0.48.2 r9819"
-   sodipodi:docname="New document 15">
+   sodipodi:docname="floor-tile base.svg">
   <defs
      id="defs4259">
     <linearGradient
@@ -234,6 +234,8 @@
        width="733.9624"
        height="564.37946"
        x="70.118942"
-       y="46.041046" />
+       y="46.041046"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
 </svg>
