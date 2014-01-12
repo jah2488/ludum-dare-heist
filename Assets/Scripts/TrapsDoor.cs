@@ -40,7 +40,7 @@ public class TrapsDoor : MonoBehaviour {
 		else {
 			//get direction to fall at
 			var activatorDir = location - transform.position;
-			var frontOfDoor = new Vector3( 0, 1, 1 );//TODO make this really the front of the door vector
+			var frontOfDoor = transform.forward; //new Vector3( 0, 1, 1 );//TODO make this really the front of the door vector
 
 			var direction = Vector3.Dot(activatorDir, frontOfDoor);
 			//start the trap sequence
@@ -53,8 +53,10 @@ public class TrapsDoor : MonoBehaviour {
 	}
 
 	IEnumerator TrapAnimation( bool fallForward ) {
-		float start = Time.time;
-		Vector3 startingRotation = transform.rotation.eulerAngles;
+		var start = Time.time;
+		var startingRotation = transform.rotation.eulerAngles;
+		var rotationOrigin = transform.position + new Vector3 (0, -1.5f, 0);
+		var rotationAxis = new Vector3 (1.0f, 0f, 0f);
 
 		Debug.Log ("Trap Triggered");
 		//warn the player (TODO)
@@ -69,7 +71,7 @@ public class TrapsDoor : MonoBehaviour {
 			if (!fallForward)
 				fallRate = -fallRate;
 
-			transform.Rotate(new Vector3(fallRate, 0, 0));
+			transform.RotateAround(rotationOrigin, rotationAxis, fallRate);
 			yield return null;
 		}
 		if (bocks != null) {
@@ -83,8 +85,8 @@ public class TrapsDoor : MonoBehaviour {
 				var riseRate = 90 * (Time.deltaTime / RiseTime);
 				if (fallForward)
 					riseRate = -riseRate;
-				
-				transform.Rotate(new Vector3(riseRate, 0, 0));
+
+				transform.RotateAround(rotationOrigin, rotationAxis, riseRate);
 				yield return null;
 			}
 			Debug.Log ("Trap done rising");
