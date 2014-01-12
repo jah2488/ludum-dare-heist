@@ -13,7 +13,7 @@ public class TrapsDoor : MonoBehaviour {
 
 	public float WarningTime ;
 	public float FallTime ;
-	public float DamagePercent ;
+	public float DamageAmount ;
 
 	// Use this for initialization
 	void Start () {
@@ -29,7 +29,7 @@ public class TrapsDoor : MonoBehaviour {
 
 	//did the door touch the player?
 	void OnTriggerEnter(Collider other) {
-		Respawn.KillPlayer ();
+		PlayerControls.DamagePlayer (DamageAmount);
 	}
 
 	void TrapDatJunk( Vector3 location ) {

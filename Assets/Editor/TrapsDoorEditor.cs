@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEditor;
 
-[CustomEditor(typeof(TrapsDoor))]
+
 public class TrapsDoorEditor : Editor
 {
 	
@@ -10,13 +10,13 @@ public class TrapsDoorEditor : Editor
 	{
 		TrapsDoor myTarget = (TrapsDoor)target;
 		
-		myTarget.ResetTrapTimer 				= EditorGUILayout.Toggle("ResetTrapTimer", myTarget.ResetTrapTimer);
-		myTarget.ResetTrapTime 					= EditorGUILayout.FloatField("ResetTrapTime", myTarget.ResetTrapTime);
-		myTarget.RiseTime 						= EditorGUILayout.FloatField("RiseTime", myTarget.RiseTime);
-		myTarget.OpenNormallyWithoutTrapping 	= EditorGUILayout.Toggle("OpenNormallyWithoutTrapping", myTarget.OpenNormallyWithoutTrapping);
-		myTarget.WarningTime 					= EditorGUILayout.FloatField("WarningTime", myTarget.WarningTime);
-		myTarget.FallTime 						= EditorGUILayout.FloatField("FallTime", myTarget.FallTime);
-		myTarget.DamagePercent 					= EditorGUILayout.FloatField("DamagePercent", myTarget.DamagePercent);
+		myTarget.ResetTrapTimer 				= EditorGUILayout.Toggle("Reset Trap Timer", myTarget.ResetTrapTimer);
+		myTarget.ResetTrapTime 					= EditorGUILayout.FloatField("Reset Trap Time", myTarget.ResetTrapTime);
+		myTarget.RiseTime 						= EditorGUILayout.FloatField("Rise Time", myTarget.RiseTime);
+		myTarget.OpenNormallyWithoutTrapping 	= EditorGUILayout.Toggle("Open Normally Without Trapping", myTarget.OpenNormallyWithoutTrapping);
+		myTarget.WarningTime 					= EditorGUILayout.FloatField("Warning Time", myTarget.WarningTime);
+		myTarget.FallTime 						= EditorGUILayout.FloatField("Fall Time", myTarget.FallTime);
+		//myTarget.DamageAmount 					= EditorGUILayout.FloatField("Damage Amount", myTarget.DamageAmount);
 		
 	}
 }
