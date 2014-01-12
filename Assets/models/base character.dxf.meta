@@ -5,11 +5,41 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     100002: Cube
+    100004: Arm.Left
+    100006: Arm.Right
+    100008: Head
+    100010: Leg.Left
+    100012: Leg.Right
+    100014: Torso
     400000: //RootNode
     400002: Cube
+    400004: Arm.Left
+    400006: Arm.Right
+    400008: Head
+    400010: Leg.Left
+    400012: Leg.Right
+    400014: Torso
     2300000: Cube
+    2300002: Arm.Left
+    2300004: Arm.Right
+    2300006: Head
+    2300008: Leg.Left
+    2300010: Leg.Right
+    2300012: Torso
     3300000: Cube
+    3300002: Arm.Left
+    3300004: Arm.Right
+    3300006: Head
+    3300008: Leg.Left
+    3300010: Leg.Right
+    3300012: Torso
     4300000: Cube
+    4300002: Arm.Left
+    4300004: Arm.Right
+    4300006: Head
+    4300008: Leg.Left
+    4300010: Leg.Right
+    4300012: Torso
     9500000: //RootNode
   materials:
     importMaterials: 1
