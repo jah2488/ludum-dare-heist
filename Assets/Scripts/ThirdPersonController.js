@@ -293,6 +293,9 @@ function Update() {
 		// kill all inputs if not controllable.
 		Input.ResetInputAxes();
 	}
+	else if (Input.GetKeyDown(KeyCode.K)) {
+		RespawnPlayer();
+	}
 
 	if (Input.GetButtonDown ("Jump"))
 	{
@@ -386,6 +389,13 @@ function Update() {
 	}
 }
 
+function RespawnPlayer(){
+	//look for respawn point.
+	if (Respawn.IsSet){
+		StartCoroutine("MoveToPosition", Respawn.Point);
+	}
+}
+
 function OnControllerColliderHit (hit : ControllerColliderHit )
 {
 //	Debug.DrawRay(hit.point, hit.normal);
@@ -438,3 +448,21 @@ function Reset ()
 	gameObject.tag = "Player";
 }
 
+function MoveToPosition (target : Vector3)
+{
+	//disable updates
+	isControllable = false;
+	
+    while(Vector3.Distance(transform.position, target) > 0.05f)
+    {
+        transform.position = Vector3.Lerp(transform.position, target, 7f * Time.deltaTime);
+        yield;
+    }
+    
+    print("Reached the target.");
+    
+    yield WaitForSeconds(3f);
+    
+    print("MoveToPosition is now finished.");
+    isControllable = true;
+}

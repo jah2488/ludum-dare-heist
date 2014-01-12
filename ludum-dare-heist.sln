@@ -7,6 +7,8 @@ Project("{FC5ED0B0-91C5-62E5-F90D-46428E9693E9}") = "ludum-dare-heist", "Assembl
 EndProject
 Project("{FC5ED0B0-91C5-62E5-F90D-46428E9693E9}") = "ludum-dare-heist", "Assembly-UnityScript-firstpass.unityproj", "{6247E04E-3C68-8B14-0FB1-2B9477203984}"
 EndProject
+Project("{FC5ED0B0-91C5-62E5-F90D-46428E9693E9}") = "ludum-dare-heist", "Assembly-UnityScript.unityproj", "{DEE37921-E07C-1286-77E2-A075905E9B92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,11 +27,15 @@ Global
 		{6247E04E-3C68-8B14-0FB1-2B9477203984}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6247E04E-3C68-8B14-0FB1-2B9477203984}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6247E04E-3C68-8B14-0FB1-2B9477203984}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEE37921-E07C-1286-77E2-A075905E9B92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEE37921-E07C-1286-77E2-A075905E9B92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEE37921-E07C-1286-77E2-A075905E9B92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEE37921-E07C-1286-77E2-A075905E9B92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-							GlobalSection(MonoDevelopProperties) = preSolution
+												GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
