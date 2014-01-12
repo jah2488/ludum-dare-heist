@@ -46,8 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\DoorControl.cs" />
      <Compile Include="Assets\Scripts\AlertOnPlayer.cs" />
+     <Compile Include="Assets\Scripts\DoorControl.cs" />
      <Compile Include="Assets\Scripts\Flash.cs" />
      <Compile Include="Assets\Scripts\Patrol.cs" />
      <Compile Include="Assets\Scripts\RotateCamera.cs" />
