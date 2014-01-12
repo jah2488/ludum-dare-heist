@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\Flash.cs" />
      <Compile Include="Assets\Scripts\Patrol.cs" />
      <Compile Include="Assets\Scripts\RotateCamera.cs" />
+     <Compile Include="Assets\Scripts\TrapsDoor.cs" />
      <Compile Include="Assets\Scripts\Trigger.cs" />
  <Reference Include="Library\ScriptAssemblies\Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>

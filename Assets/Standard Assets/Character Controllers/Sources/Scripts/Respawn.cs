@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Respawn : MonoBehaviour
 {
+
+	public delegate void PlayerDeathHandler ();
+	public static event PlayerDeathHandler OnKillPlayer;
 	
 	protected static Vector3 _point;
 	protected static bool _isSet;
@@ -25,6 +28,12 @@ public class Respawn : MonoBehaviour
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	public static void KillPlayer ()
+	{
+		if (OnKillPlayer != null)
+			OnKillPlayer ();
 	}
 }
 

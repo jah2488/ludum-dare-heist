@@ -90,6 +90,10 @@ private var lastGroundedTime = 0.0;
 
 private var isControllable = true;
 
+function Start(){
+	Respawn.OnKillPlayer += RespawnPlayer;
+}
+
 function Awake ()
 {
 	moveDirection = transform.TransformDirection(Vector3.forward);
@@ -292,9 +296,10 @@ function Update() {
 	{
 		// kill all inputs if not controllable.
 		Input.ResetInputAxes();
-	}
-	else if (Input.GetKeyDown(KeyCode.K)) {
+	} else if (Input.GetKeyDown(KeyCode.K)) {
 		RespawnPlayer();
+	} else if (Input.GetKeyDown(KeyCode.E)) {
+		PlayerControls.Use(transform.position);
 	}
 
 	if (Input.GetButtonDown ("Jump"))
