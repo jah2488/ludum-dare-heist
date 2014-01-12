@@ -5,7 +5,11 @@ Project("{58E74DFC-C386-2CBD-677C-1BCE2C308371}") = "heist", "Assembly-CSharp-fi
 EndProject
 Project("{58E74DFC-C386-2CBD-677C-1BCE2C308371}") = "heist", "Assembly-CSharp.csproj", "{F71E8A2D-BA48-1A93-DF93-B28ACE85BDAB}"
 EndProject
+Project("{58E74DFC-C386-2CBD-677C-1BCE2C308371}") = "heist", "Assembly-CSharp-Editor.csproj", "{F918764A-3CA7-EBF5-DD9B-625328E680D0}"
+EndProject
 Project("{58E74DFC-C386-2CBD-677C-1BCE2C308371}") = "heist", "Assembly-UnityScript-firstpass.unityproj", "{CA6242AF-3AD2-0526-D6F7-D176E1E004E4}"
+EndProject
+Project("{58E74DFC-C386-2CBD-677C-1BCE2C308371}") = "heist", "Assembly-UnityScript.unityproj", "{2A38D986-F99B-8997-4C3A-E19D6D6C4225}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,15 +25,23 @@ Global
 		{F71E8A2D-BA48-1A93-DF93-B28ACE85BDAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F71E8A2D-BA48-1A93-DF93-B28ACE85BDAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F71E8A2D-BA48-1A93-DF93-B28ACE85BDAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F918764A-3CA7-EBF5-DD9B-625328E680D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F918764A-3CA7-EBF5-DD9B-625328E680D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F918764A-3CA7-EBF5-DD9B-625328E680D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F918764A-3CA7-EBF5-DD9B-625328E680D0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CA6242AF-3AD2-0526-D6F7-D176E1E004E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CA6242AF-3AD2-0526-D6F7-D176E1E004E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA6242AF-3AD2-0526-D6F7-D176E1E004E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA6242AF-3AD2-0526-D6F7-D176E1E004E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A38D986-F99B-8997-4C3A-E19D6D6C4225}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A38D986-F99B-8997-4C3A-E19D6D6C4225}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A38D986-F99B-8997-4C3A-E19D6D6C4225}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A38D986-F99B-8997-4C3A-E19D6D6C4225}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																														GlobalSection(MonoDevelopProperties) = preSolution
+																																		GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
