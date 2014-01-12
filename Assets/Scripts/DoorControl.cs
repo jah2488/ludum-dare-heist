@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[System.Serializable]
 public class DoorControl : MonoBehaviour {
 
-	public float DistanceToActivate { get; set; }
+	public float DistanceToActivate;
 
 	public delegate void ActivateCallback(Vector3 location);
 	public event ActivateCallback OnActivate;
@@ -11,7 +12,6 @@ public class DoorControl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		PlayerControls.OnUse += OnPlayerUse;
-		DistanceToActivate = 2f;
 	}
 	
 	// Update is called once per frame

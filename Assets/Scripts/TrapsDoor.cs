@@ -1,27 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[System.Serializable]
 public class TrapsDoor : MonoBehaviour {
 
 	DoorControl control;
-	public bool ResetTrapTimer { get; set; }
-	public float ResetTrapTime { get; set; }
-	public float RiseTime { get; set; }
+	public bool ResetTrapTimer ;
+	public float ResetTrapTime ;
+	public float RiseTime ;
 	
-	public bool OpenNormallyWithoutTrapping { get; set; }
+	public bool OpenNormallyWithoutTrapping ;
 
-	public float WarningTime { get; set; }
-	public float FallTime { get; set; }
-	public float DamagePercent { get; set; }
+	public float WarningTime ;
+	public float FallTime ;
+	public float DamagePercent ;
 
 	// Use this for initialization
 	void Start () {
-		ResetTrapTime = 2.0f;
 		control = GetComponent<DoorControl> ();
 		if (control != null)
 			control.OnActivate += TrapDatJunk;
-		FallTime = 3;
-		ResetTrapTimer = true;
 	}
 	
 	// Update is called once per frame

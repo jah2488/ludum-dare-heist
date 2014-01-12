@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Editor\DoorControlEditor.cs" />
+     <Compile Include="Assets\Editor\TrapsDoorEditor.cs" />
  <Reference Include="\Applications\Unity\Unity.app\Contents\Frameworks\Managed\UnityEditor.Graphs">
  <HintPath>\Applications\Unity\Unity.app\Contents\Frameworks\Managed\UnityEditor.Graphs.dll</HintPath>
  </Reference>
