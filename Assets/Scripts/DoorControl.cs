@@ -13,15 +13,19 @@ public class DoorControl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		PlayerControls.OnUse += OnPlayerUse;
-		if (!string.IsNullOrEmpty(TriggerIdentifier.Trim()))
+		if (!string.IsNullOrEmpty (TriggerIdentifier.Trim ())) {
 			ButtonControl.OnActivateGlobal += HandleOnActivateGlobal;
+			Trigger.OnActivateGlobal += HandleOnActivateGlobal;
+		}
 	}
 
 	void HandleOnActivateGlobal (Vector3 location, string triggerIdentifier)
 	{
-		if (triggerIdentifier == TriggerIdentifier.Trim ().ToUpper ())
-			if (OnActivate != null)
+		if (triggerIdentifier.Trim ().ToUpper () == TriggerIdentifier.Trim ().ToUpper ()) {
+			if (OnActivate != null){
 				OnActivate (location);
+			}
+		}
 	}
 	
 	// Update is called once per frame
@@ -33,7 +37,6 @@ public class DoorControl : MonoBehaviour {
 		var dist = Vector3.Distance (transform.position, location);
 		if (dist < DistanceToActivate) {
 			if (OnActivate != null){
-				Debug.Log("Activating door.");
 				OnActivate(location);
 			}
 			else

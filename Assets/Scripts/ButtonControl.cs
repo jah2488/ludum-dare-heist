@@ -7,7 +7,7 @@ public class ButtonControl : MonoBehaviour {
 	public float DistanceToActivate;
 	public string TriggerIdentifier;
 
-	public delegate void ActivateCallback(Vector3 location);
+	public delegate void ActivateCallback(Vector3 location, string triggerIdentifier);
 	public event ActivateCallback OnActivate;
 	
 	public delegate void GlobalActivateCallback(Vector3 location, string triggerIdentifier);
@@ -28,7 +28,7 @@ public class ButtonControl : MonoBehaviour {
 		if (dist < DistanceToActivate) {
 			if (OnActivate != null){
 				Debug.Log("Activating the button.");
-				OnActivate(location);
+				OnActivate(location, TriggerIdentifier);
 			}
 			else
 				Debug.Log("No button to activate!");

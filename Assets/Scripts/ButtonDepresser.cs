@@ -25,14 +25,15 @@ public class ButtonDepresser : MonoBehaviour {
 			renderer.material.SetColor("_Color", NotAsDepressedColor);
 	}
 	
-	void DepressButton(Vector3 location){
+	void DepressButton(Vector3 location, string triggerIdentifier){
 		Debug.Log ("profound sadness :cccccccc");//cccccc
 		depressed = true;//it's the common cold of buttons
-		StartCoroutine (PopPills ());
+		StartCoroutine (PopPills (location, triggerIdentifier));
 	}
 
-	IEnumerator PopPills(){
+	IEnumerator PopPills(Vector3 location, string triggerIdentifier){
 		yield return new WaitForSeconds(TimeBeforeAntiDepressantsAdministered);
 		depressed = false;//how's that for confidence?
+		ButtonControl.ActivateGlobal (location, triggerIdentifier);
 	}
 }
