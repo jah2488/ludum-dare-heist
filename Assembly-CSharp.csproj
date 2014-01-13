@@ -48,6 +48,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\AlarmManager.cs" />
      <Compile Include="Assets\Scripts\AlertOnPlayer.cs" />
+     <Compile Include="Assets\Scripts\ButtonControl.cs" />
+     <Compile Include="Assets\Scripts\ButtonDepresser.cs" />
      <Compile Include="Assets\Scripts\DoorControl.cs" />
      <Compile Include="Assets\Scripts\Flash.cs" />
      <Compile Include="Assets\Scripts\HealthControl.cs" />

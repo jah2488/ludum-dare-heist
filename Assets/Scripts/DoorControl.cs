@@ -30,7 +30,7 @@ public class DoorControl : MonoBehaviour {
 				Debug.Log("No door to activate!");
 		}
 		else {
-			Debug.Log("Distance of " + dist + " is too far from door (needs " + DistanceToActivate + " to trigger) ");
+			//Debug.Log("Distance of " + dist + " is too far from door (needs " + DistanceToActivate + " to trigger) ");
 		}
 	}
 }

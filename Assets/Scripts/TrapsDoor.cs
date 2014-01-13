@@ -40,7 +40,7 @@ public class TrapsDoor : MonoBehaviour {
 		else {
 			//get direction to fall at
 			var activatorDir = location - transform.position;
-			var frontOfDoor = transform.forward; //new Vector3( 0, 1, 1 );//TODO make this really the front of the door vector
+			var frontOfDoor = transform.forward; //new Vector3( 0, 1, 1 );
 
 			var direction = Vector3.Dot(activatorDir, frontOfDoor);
 			//start the trap sequence
