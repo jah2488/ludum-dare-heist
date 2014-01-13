@@ -2,7 +2,6 @@ using UnityEngine;
 using System.Collections;
 using UnityEditor;
 
-[CustomEditor(typeof(DoorControl))]
 public class DoorControlEditor : Editor
 {
 

@@ -9,14 +9,10 @@ public class ButtonDepresser : MonoBehaviour {
 	public Color DepressingColor;
 	public Color NotAsDepressedColor;
 
-	MeshRenderer renderer;
-	Material shinypart;
 	ButtonControl activator;
 
 	// Use this for initialization
 	void Start () {
-		renderer = GetComponent<MeshRenderer> ();
-		shinypart = renderer.material;
 		activator = GetComponent<ButtonControl> ();
 		activator.OnActivate += DepressButton;
 	}

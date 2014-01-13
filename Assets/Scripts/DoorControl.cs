@@ -5,6 +5,7 @@ using System.Collections;
 public class DoorControl : MonoBehaviour {
 
 	public float DistanceToActivate;
+	public string TriggerIdentifier;
 
 	public delegate void ActivateCallback(Vector3 location);
 	public event ActivateCallback OnActivate;
@@ -12,6 +13,15 @@ public class DoorControl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		PlayerControls.OnUse += OnPlayerUse;
+		if (!string.IsNullOrEmpty(TriggerIdentifier.Trim()))
+			ButtonControl.OnActivateGlobal += HandleOnActivateGlobal;
+	}
+
+	void HandleOnActivateGlobal (Vector3 location, string triggerIdentifier)
+	{
+		if (triggerIdentifier == TriggerIdentifier.Trim ().ToUpper ())
+			if (OnActivate != null)
+				OnActivate (location);
 	}
 	
 	// Update is called once per frame
